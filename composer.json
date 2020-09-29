@@ -1,10 +1,10 @@
 {
     "name": "shane/tenet",
-    "description": "淘客sdk,包含淘宝联盟，折淘客，京东联盟，好京客，维易淘宝客，多多进宝",
+    "description": "\u6dd8\u5ba2sdk,\u5305\u542b\u6dd8\u5b9d\u8054\u76df\uff0c\u6298\u6dd8\u5ba2\uff0c\u4eac\u4e1c\u8054\u76df\uff0c\u597d\u4eac\u5ba2\uff0c\u7ef4\u6613\u6dd8\u5b9d\u5ba2\uff0c\u591a\u591a\u8fdb\u5b9d",
     "type": "library",
     "license": "MIT",
     "keywords": [
-        "淘宝客"
+        "\u6dd8\u5b9d\u5ba2"
     ],
     "authors": [
         {
@@ -15,19 +15,22 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.1",
-        "guzzlehttp/guzzle": "^7.0"
+        "guzzlehttp/guzzle": "^7.0",
+        "php-di/php-di": "~6.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.5.5",
+        "codeception/codeception": "^4.1",
         "squizlabs/php_codesniffer": "3.*",
         "phpstan/phpstan": "^0.12",
-        "nikic/PHP-Parser": "^4.9",
-        "codeception/codeception": "^4.1"
+        "nikic/php-parser": "^4.9",
+        "vlucas/phpdotenv": "^5.1",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0",
+        "codeception/module-rest":"*"
     },
-    "repositories": [
-	    {
-            "type": "composer",
-            "url": "https://packagist.phpcomposer.com"
+    "autoload": {
+        "psr-4": {
+            "Tenet\\": "src/"
         }
-    ]
+    }
 }
