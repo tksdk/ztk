@@ -1,25 +1,23 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Tenet\Kernel\Http;
 
 use GuzzleHttp\Client as GuzzleHttpClient;
 use GuzzleHttp\ClientInterface;
-use Psr\Http\Client\ClientInterface as ClientClientInterface;
 use Tenet\Kernel\Application;
-use Tenet\Tbk\Gateways\ZtkGateway;
 
-class Client 
+class Client
 {
 
-    const STATUS_SUCCESS = 'success';
+    protected const STATUS_SUCCESS = 'success';
 
-    const STATUS_FAILURE = 'failure';
+    protected const STATUS_FAILURE = 'failure';
 
     /**
      * http client 客户端
-     * @var \Psr\http\Client\ClientInterface
+     * @var \GuzzleHttp\ClientInterface $httpClient
      */
     protected $httpClient;
 
@@ -53,9 +51,9 @@ class Client
     /**
      * Get a Guzzle Client
      *
-     * @return ClientInterface
+     * @return \GuzzleHttp\ClientInterface
      */
-    public function getHttpClient() : ClientInterface
+    public function getHttpClient(): ClientInterface
     {
         if (!($this->httpClient instanceof ClientInterface)) {
             $this->httpClient = new GuzzleHttpClient();
@@ -68,22 +66,23 @@ class Client
     /**
      * Make a http request
      *
-     * @param string $endpoints 
-     * @param array $params
+     * @param string $endpoint
+     * @param array $args
      * @param array $options
      * @param string $method
-     * 
+     *
      * @return array
-     * 
-     * @throws Exception
+     *
+     * @throws \Exception
      */
     public function request(string $endpoint, array $args, array $options, string $method = 'get')
     {
         $method = strtoupper($method);
         $options = array_merge($options, ['query' => $args]);
         $isSuccessful = false;
-        foreach ($this->gateways as $gateway) {
-            try {
+        $results = [];
+        try {
+            foreach ($this->gateways as $gateway) {
                 $options['base_uri'] = $gateway;
                 $results[$gateway] = [
                     'data' => $this->getHttpClient()->request($method, $endpoint, $options),
@@ -91,22 +90,20 @@ class Client
                     'status' => self::STATUS_SUCCESS,
                 ];
                 $isSuccessful = true;
-                
+
                 break;
-            } catch (\Exception $e) {
-                $results[$gateway] = [
-                    'exception' => $e->getMessage(),
-                    'failed_at' => \time(),
-                    'status' => self::STATUS_FAILURE, 
-                ];
             }
+        } catch (\Exception $e) {
+            $results['error'] = [
+                'exception' => $e->getMessage(),
+                'failed_at' => \time(),
+                'status' => self::STATUS_FAILURE,
+            ];
+        } finally {
+            if (!$isSuccessful) {
+                throw new \Exception('There is not available gateway');
+            }
+            return $results;
         }
-
-        if (!$isSuccessful) {
-            throw new \Exception('There is not available gateway');
-        }
-    
-        return $results;
     }
-
 }

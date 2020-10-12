@@ -1,6 +1,8 @@
-<?php namespace Test;
+<?php 
 
-class ClientTest extends \Codeception\Test\Unit
+namespace Test;
+
+class FactoryTest extends \Codeception\Test\Unit
 {
     /**
      * @var \Test\UnitTester
@@ -18,6 +20,6 @@ class ClientTest extends \Codeception\Test\Unit
     // tests
     public function testSomeFeature()
     {
-
     }
 }
+

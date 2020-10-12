@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
 
 namespace Tenet\Support;
 
@@ -12,7 +12,7 @@ use Tenet\Kernel\Application;
  */
 class Config implements ArrayAccess
 {
-   
+
     protected $config;
 
     protected $app;
@@ -27,7 +27,7 @@ class Config implements ArrayAccess
         $this->config = $config;
     }
 
-    
+
     public function get($key, $default = null)
     {
         $config = $this->config;
@@ -50,19 +50,19 @@ class Config implements ArrayAccess
         return $config;
     }
 
-   
+
     public function offsetExists($offset)
     {
         return \array_key_exists($offset, $this->config);
     }
 
-   
+
     public function offsetGet($offset)
     {
         return $this->get($offset);
     }
 
-   
+
     public function offsetSet($offset, $value)
     {
         if (isset($this->config[$offset])) {
@@ -70,7 +70,7 @@ class Config implements ArrayAccess
         }
     }
 
-   
+
     public function offsetUnset($offset)
     {
         if (isset($this->config[$offset])) {

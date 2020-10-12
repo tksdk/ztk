@@ -1,27 +1,25 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
-namespace Tenet;
+namespace Tenet\Ztk;
 
-class Factory 
+class Factory
 {
+    public static function make(string $name, array $config)
+    {
+        $namespace = \Tenet\Support\Str::studly($name);
+        $application = "\\Tenet\\{$namespace}\\Application";
 
-
-	public static function make(string $name, array $config)
-	{
-		$namespace = Support\Str::studly($name);
-		$application = "\\Tenet\\{$namespace}\\Application";
-		
-		if (! \class_exists($application)) {
-			throw new \Exception('The third service is not existed!');
-		}
+        if (! \class_exists($application)) {
+            throw new \Exception('The third service is not existed!');
+        }
 
         return new $application($config);
-	}
+    }
 
-	public static function __callStatic(string $name, array $arguments)
-	{
-		return self::make($name, ...$arguments);
-	}
+    public static function __callStatic(string $name, array $arguments)
+    {
+        return self::make($name, ...$arguments);
+    }
 }

@@ -1,33 +1,47 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
-namespace Tenet\Taobao;
+namespace Tenet\Ztk;
 
 use Tenet\Kernel\Application as KernelApplication;
 use Tenet\Support\Config;
-use Tenet\Taobao\Base\Client;
-use Tenet\Taobao\Ztk\ZtkQuanGoodsDetails;
+use Tenet\Ztk\Base\Client;
+use Tenet\Ztk\Taobao\DongDong;
+use Tenet\Ztk\Taobao\Hours;
+use Tenet\Ztk\Taobao\MeiMeiQuan;
+use Tenet\Ztk\Taobao\QuanGoodsDetails;
+use Tenet\Ztk\Taobao\QuanGoodsSearch;
+use Tenet\Ztk\Taobao\QuanZi;
+use Tenet\Ztk\Taobao\ShouDan;
+use Tenet\Ztk\Taobao\XianBao;
 
 /**
  * @property \Tenet\Support\Config $config
- * @property \Tenet\Tbk\Union\Union $union
+ * @property $this $app
  */
 class Application implements \ArrayAccess, KernelApplication
 {
 
     protected $container = [];
 
+    protected $arrayConfig;
+
     protected $providers = [
-        "ztkQuan" => ZtkQuanGoodsDetails::class,
+        "search" => QuanGoodsSearch::class,
+        "meiQuan" => MeiMeiQuan::class,
+        "details" => QuanGoodsDetails::class,
+        "xianBao" => XianBao::class,
+        "hours" => Hours::class,
+        "ddg" => DongDong::class,
+        'pyq' => QuanZi::class,
+        "shoudan" => ShouDan::class,
     ];
 
     protected $defaultProviders = [
-        'base' => Client::class, 
+        'base' => Client::class,
         'config' => Config::class,
     ];
-
-    protected $arrayConfig;
 
     public function __construct(array $config)
     {
@@ -37,8 +51,6 @@ class Application implements \ArrayAccess, KernelApplication
         $this->bootStrap();
 
         $this->initialize();
-
-
     }
 
     private function allProviders()
@@ -91,11 +103,11 @@ class Application implements \ArrayAccess, KernelApplication
     {
         return $this->container[$name];
     }
-    
+
 
     public function offsetSet($name, $value)
     {
-        if (! isset($this->container[$name]) || empty($this->container($name))) {
+        if (! isset($this->container[$name]) || empty($this->container[$name])) {
             $this->container[$name] = $value;
         }
     }

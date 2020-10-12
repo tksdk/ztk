@@ -199,7 +199,7 @@ class Str
     {
         $quoted = preg_quote($cap, '/');
 
-        return preg_replace('/(?:'.$quoted.')+$/u', '', $value).$cap;
+        return preg_replace('/(?:' . $quoted . ')+$/u', '', $value) . $cap;
     }
 
     /**
@@ -258,7 +258,7 @@ class Str
             return $value;
         }
 
-        return rtrim(mb_strimwidth($value, 0, $limit, '', 'UTF-8')).$end;
+        return rtrim(mb_strimwidth($value, 0, $limit, '', 'UTF-8')) . $end;
     }
 
     /**
@@ -282,13 +282,13 @@ class Str
      */
     public static function words($value, $words = 100, $end = '...')
     {
-        preg_match('/^\s*+(?:\S++\s*+){1,'.$words.'}/u', $value, $matches);
+        preg_match('/^\s*+(?:\S++\s*+){1,' . $words . '}/u', $value, $matches);
 
         if (! isset($matches[0]) || static::length($value) === static::length($matches[0])) {
             return $value;
         }
 
-        return rtrim($matches[0]).$end;
+        return rtrim($matches[0]) . $end;
     }
 
     /**
@@ -342,33 +342,6 @@ class Str
         return static::contains($callback, '@') ? explode('@', $callback, 2) : [$callback, $default];
     }
 
-    /**
-     * Get the plural form of an English word.
-     *
-     * @param  string  $value
-     * @param  int  $count
-     * @return string
-     */
-    public static function plural($value, $count = 2)
-    {
-        return Pluralizer::plural($value, $count);
-    }
-
-    /**
-     * Pluralize the last word of an English, studly caps case string.
-     *
-     * @param  string  $value
-     * @param  int  $count
-     * @return string
-     */
-    public static function pluralStudly($value, $count = 2)
-    {
-        $parts = preg_split('/(.)(?=[A-Z])/u', $value, -1, PREG_SPLIT_DELIM_CAPTURE);
-
-        $lastWord = array_pop($parts);
-
-        return implode('', $parts).self::plural($lastWord, $count);
-    }
 
     /**
      * Generate a more truly "random" alpha-numeric string.
@@ -406,7 +379,7 @@ class Str
         $result = array_shift($segments);
 
         foreach ($segments as $segment) {
-            $result .= (array_shift($replace) ?? $search).$segment;
+            $result .= (array_shift($replace) ?? $search) . $segment;
         }
 
         return $result;
@@ -465,7 +438,7 @@ class Str
     {
         $quoted = \preg_quote($prefix, '/');
 
-        return $prefix.\preg_replace('/^(?:'.$quoted.')+/u', '', $value);
+        return $prefix . \preg_replace('/^(?:' . $quoted . ')+/u', '', $value);
     }
 
     /**
@@ -508,7 +481,7 @@ class Str
         if (! \ctype_lower($value)) {
             $value = \preg_replace('/\s+/u', '', ucwords($value));
 
-            $value = static::lower(\preg_replace('/(.)(?=[A-Z])/u', '$1'.$delimiter, $value));
+            $value = static::lower(\preg_replace('/(.)(?=[A-Z])/u', '$1' . $delimiter, $value));
         }
 
         return static::$snakeCache[$key][$delimiter] = $value;
@@ -590,6 +563,6 @@ class Str
      */
     public static function ucfirst($string)
     {
-        return static::upper(static::substr($string, 0, 1)).static::substr($string, 1);
+        return static::upper(static::substr($string, 0, 1)) . static::substr($string, 1);
     }
 }

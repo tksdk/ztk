@@ -1,0 +1,18 @@
+<?php
+
+## 方案一
+factory::taobao($config)->ztk->quan->quan($args);
+factory::taobao($config)->union->details->quan($args);
+factory::taobao($config)->ztk->goods->test($args);
+
+## 方案二
+
+factory::taobao($config)->ztkQuan->quan($args);
+factory::taobao($config)->unionDetails->quan($args);
+factory::taobao($config)->ztkGoods->test($args);
+
+## 方案三
+
+factory::taobao($config)->ztk()->quan();
+
+

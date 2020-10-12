@@ -1,8 +1,8 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
-namespace Tenet\Taobao\Ztk;
+namespace Tenet\Ztk\Taobao;
 
 /**
  * 全网商品详情API接口
@@ -11,7 +11,7 @@ namespace Tenet\Taobao\Ztk;
  *
  * @link https://www.zhetaoke.com/user/extend/extend_lingquan_detail.aspx
  */
-class ZtkQuanGoodsDetails extends ZtkAbstract
+class QuanGoodsDetails extends ZtkAbstract
 {
     /**
      * 接口名称
@@ -25,5 +25,4 @@ class ZtkQuanGoodsDetails extends ZtkAbstract
      * @var boolean
      */
     public $enableSid = false;
-    
 }
