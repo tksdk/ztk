@@ -49,7 +49,6 @@ class Application implements \ArrayAccess, KernelApplication
         "hours" => Hours::class,
         "ddg" => DongDong::class,
         "shoudan" => ShouDan::class,
-        "brands" => Brands::class,
         "all" => AllGoods::class,
         "brands" => Brands::class,
         "carousel" => Carousel::class,

@@ -1,11 +1,11 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
 namespace Tenet\Ztk\Taobao;
 
 /**
- * 轮播图API 
+ * 轮播图API
  *
  * 返回轮播图列表和相应的专题商品请求地址
  *
@@ -13,9 +13,9 @@ namespace Tenet\Ztk\Taobao;
  */
 class Carousel extends ZtkAbstract
 {
-	/**
-	 * @var string $api 接口名称
-	 */
+    /**
+     * @var string $api 接口名称
+     */
     public $api = 'api/api_lunbo.ashx';
 
     /**

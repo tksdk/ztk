@@ -1,9 +1,8 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
 namespace Tenet\Ztk\Taobao;
-
 
 /**
  * 二维码发单图API（朋友圈文案）
@@ -14,9 +13,9 @@ namespace Tenet\Ztk\Taobao;
  */
 class WxTwit extends ZtkAbstract
 {
-	/**
-	 * @var string $api 接口名称
-	 */
+    /**
+     * @var string $api 接口名称
+     */
     public $api = 'api/open_qrpic.ashx';
 
     /**

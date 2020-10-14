@@ -1,9 +1,8 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
 namespace Tenet\Ztk\Taobao;
-
 
 /**
  * 猜你喜欢API（相似商品API）
@@ -14,9 +13,9 @@ namespace Tenet\Ztk\Taobao;
  */
 class Recommends extends ZtkAbstract
 {
-	/**
-	 * @var string $api 接口名称
-	 */
+    /**
+     * @var string $api 接口名称
+     */
     public $api = 'api/open_item_guess_like.ashx';
 
     /**

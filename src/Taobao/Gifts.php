@@ -1,9 +1,8 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
 namespace Tenet\Ztk\Taobao;
-
 
 /**
  * 精选礼物专题API
@@ -14,9 +13,9 @@ namespace Tenet\Ztk\Taobao;
  */
 class Gifts extends ZtkAbstract
 {
-	/**
-	 * @var string $api 接口名称
-	 */
+    /**
+     * @var string $api 接口名称
+     */
     public $api = 'api/api_liwu_zhuanti.ashx.ashx';
 
     /**

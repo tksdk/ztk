@@ -4,6 +4,8 @@ namespace Test;
 
 use Tenet\Ztk\Factory;
 
+use Tenet\Ztk\Factory;
+
 class FactoryTest extends \Codeception\Test\Unit
 {
     /**
@@ -38,3 +40,9 @@ class FactoryTest extends \Codeception\Test\Unit
     }
 }
 
+    {
+        $this->expectException(\Exception::class);
+        $this->expectDeprecationMessage('The third service is not existed!');
+        Factory::jd([]);
+    }
+}

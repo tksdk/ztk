@@ -1,9 +1,8 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types=1);
 
 namespace Tenet\Ztk\Taobao;
-
 
 /**
  * 实时支出佣金榜API
@@ -14,9 +13,9 @@ namespace Tenet\Ztk\Taobao;
  */
 class CouponsGoods extends ZtkAbstract
 {
-	/**
-	 * @var string $api 接口名称
-	 */
+    /**
+     * @var string $api 接口名称
+     */
     public $api = 'api/api_yongjin.ashx';
 
     /**
