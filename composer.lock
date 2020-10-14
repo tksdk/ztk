@@ -593,12 +593,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "b1fbdff230c2fae8b3e600ead18e711563f05a04"
+                "reference": "381524e8568e07f31d504a945b88556548c8c42e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/b1fbdff230c2fae8b3e600ead18e711563f05a04",
-                "reference": "b1fbdff230c2fae8b3e600ead18e711563f05a04",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/381524e8568e07f31d504a945b88556548c8c42e",
+                "reference": "381524e8568e07f31d504a945b88556548c8c42e",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -608,12 +608,12 @@
                 ]
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=7.2.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -640,7 +640,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2020-09-18T06:44:01+00:00"
+            "time": "2020-10-13T07:07:53+00:00"
         },
         {
             "name": "psr/http-client",
@@ -3051,12 +3051,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "ffc949a1a2aae270ea064453d7535b82e4c32092"
+                "reference": "e3ec6059b3fe483d42fbaf1fe6eefa201f7b4a6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/ffc949a1a2aae270ea064453d7535b82e4c32092",
-                "reference": "ffc949a1a2aae270ea064453d7535b82e4c32092",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/e3ec6059b3fe483d42fbaf1fe6eefa201f7b4a6d",
+                "reference": "e3ec6059b3fe483d42fbaf1fe6eefa201f7b4a6d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3111,7 +3111,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-28T05:32:55+00:00"
+            "time": "2020-10-13T11:48:30+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -3739,12 +3739,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "33a4891b990c768aa600f8c9236f7185d169f286"
+                "reference": "d4ba5fc8183e6fc0c5e2b891bc1d8f9f0d34512d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/33a4891b990c768aa600f8c9236f7185d169f286",
-                "reference": "33a4891b990c768aa600f8c9236f7185d169f286",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d4ba5fc8183e6fc0c5e2b891bc1d8f9f0d34512d",
+                "reference": "d4ba5fc8183e6fc0c5e2b891bc1d8f9f0d34512d",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3788,7 +3788,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-10-01T04:08:03+00:00"
+            "time": "2020-10-13T22:05:34+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -3796,12 +3796,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "d3770f338f14c86e7a7d69fd69a6748c0dbee6e0"
+                "reference": "45fe356a63145caa474484a73d34bc8a4510352f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/d3770f338f14c86e7a7d69fd69a6748c0dbee6e0",
-                "reference": "d3770f338f14c86e7a7d69fd69a6748c0dbee6e0",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/45fe356a63145caa474484a73d34bc8a4510352f",
+                "reference": "45fe356a63145caa474484a73d34bc8a4510352f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3824,6 +3824,9 @@
                 "symfony/process": ""
             },
             "type": "library",
+            "extra": {
+                "branch-version": "5.2"
+            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\BrowserKit\\": ""
@@ -3862,7 +3865,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-06T15:53:16+00:00"
+            "time": "2020-10-13T13:22:54+00:00"
         },
         {
             "name": "symfony/console",
@@ -3870,12 +3873,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "3b597067ee2b07ef6fbbebfe2afa0e88fae9a8a7"
+                "reference": "5d5ff78dc06109b534866efe6918973581ca68b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/3b597067ee2b07ef6fbbebfe2afa0e88fae9a8a7",
-                "reference": "3b597067ee2b07ef6fbbebfe2afa0e88fae9a8a7",
+                "url": "https://api.github.com/repos/symfony/console/zipball/5d5ff78dc06109b534866efe6918973581ca68b2",
+                "reference": "5d5ff78dc06109b534866efe6918973581ca68b2",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3918,6 +3921,9 @@
                 "symfony/process": ""
             },
             "type": "library",
+            "extra": {
+                "branch-version": "5.2"
+            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Console\\": ""
@@ -3962,7 +3968,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-06T15:53:16+00:00"
+            "time": "2020-10-13T13:22:54+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -3970,12 +3976,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "a6560830f2aeea7ff76e8977f51f893abdc7cf73"
+                "reference": "bbd38ed2a927e26699b118e85923ed5706ca2ece"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/a6560830f2aeea7ff76e8977f51f893abdc7cf73",
-                "reference": "a6560830f2aeea7ff76e8977f51f893abdc7cf73",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/bbd38ed2a927e26699b118e85923ed5706ca2ece",
+                "reference": "bbd38ed2a927e26699b118e85923ed5706ca2ece",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3988,6 +3994,9 @@
                 "php": ">=7.2.5"
             },
             "type": "library",
+            "extra": {
+                "branch-version": "5.2"
+            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\CssSelector\\": ""
@@ -4030,7 +4039,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-06T15:53:16+00:00"
+            "time": "2020-10-13T13:22:54+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -4108,12 +4117,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "65cf8681bf900e94d51fba0fa68f0e12bdbc24be"
+                "reference": "db1d063792ecafc23d1ca9038ecb25b07e2a104f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/65cf8681bf900e94d51fba0fa68f0e12bdbc24be",
-                "reference": "65cf8681bf900e94d51fba0fa68f0e12bdbc24be",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/db1d063792ecafc23d1ca9038ecb25b07e2a104f",
+                "reference": "db1d063792ecafc23d1ca9038ecb25b07e2a104f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4139,6 +4148,9 @@
                 "symfony/css-selector": ""
             },
             "type": "library",
+            "extra": {
+                "branch-version": "5.2"
+            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\DomCrawler\\": ""
@@ -4177,7 +4189,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-06T15:53:16+00:00"
+            "time": "2020-10-13T13:22:54+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -4185,12 +4197,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "46a52c269c1772f90164704a175d31dde63a9ba5"
+                "reference": "30555fd464b9065c7bbf7a2a18d34207ea6c2be3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/46a52c269c1772f90164704a175d31dde63a9ba5",
-                "reference": "46a52c269c1772f90164704a175d31dde63a9ba5",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/30555fd464b9065c7bbf7a2a18d34207ea6c2be3",
+                "reference": "30555fd464b9065c7bbf7a2a18d34207ea6c2be3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4227,6 +4239,9 @@
                 "symfony/http-kernel": ""
             },
             "type": "library",
+            "extra": {
+                "branch-version": "5.2"
+            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\EventDispatcher\\": ""
@@ -4265,7 +4280,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-06T15:53:16+00:00"
+            "time": "2020-10-13T13:22:54+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -4355,12 +4370,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "b05b9bb8ac9823a666806551395e89affaf37b26"
+                "reference": "28f544a11024209fae130737ebee1de3affd2d11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/b05b9bb8ac9823a666806551395e89affaf37b26",
-                "reference": "b05b9bb8ac9823a666806551395e89affaf37b26",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/28f544a11024209fae130737ebee1de3affd2d11",
+                "reference": "28f544a11024209fae130737ebee1de3affd2d11",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4373,6 +4388,9 @@
                 "php": ">=7.2.5"
             },
             "type": "library",
+            "extra": {
+                "branch-version": "5.2"
+            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Finder\\": ""
@@ -4411,7 +4429,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-06T15:53:16+00:00"
+            "time": "2020-10-13T13:22:54+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -5005,12 +5023,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "f6b50e40d3da8a1b0c94f477b282f6ac95d10d2b"
+                "reference": "c2979f2f05388e0b7d2ca65d3ff5033779fc3215"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/f6b50e40d3da8a1b0c94f477b282f6ac95d10d2b",
-                "reference": "f6b50e40d3da8a1b0c94f477b282f6ac95d10d2b",
+                "url": "https://api.github.com/repos/symfony/string/zipball/c2979f2f05388e0b7d2ca65d3ff5033779fc3215",
+                "reference": "c2979f2f05388e0b7d2ca65d3ff5033779fc3215",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5034,6 +5052,9 @@
                 "symfony/var-exporter": "^4.4|^5.0"
             },
             "type": "library",
+            "extra": {
+                "branch-version": "5.2"
+            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\String\\": ""
@@ -5083,7 +5104,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-06T17:37:38+00:00"
+            "time": "2020-10-13T13:22:54+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -5091,12 +5112,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "2ca5da52f9991296b3f2573fcd169ba31fc892d3"
+                "reference": "1a783b4ff5da1ccc2ca3d1b9bc8c33d316ace15a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/2ca5da52f9991296b3f2573fcd169ba31fc892d3",
-                "reference": "2ca5da52f9991296b3f2573fcd169ba31fc892d3",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/1a783b4ff5da1ccc2ca3d1b9bc8c33d316ace15a",
+                "reference": "1a783b4ff5da1ccc2ca3d1b9bc8c33d316ace15a",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -5123,6 +5144,9 @@
                 "Resources/bin/yaml-lint"
             ],
             "type": "library",
+            "extra": {
+                "branch-version": "5.2"
+            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Yaml\\": ""
@@ -5161,7 +5185,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-06T15:53:16+00:00"
+            "time": "2020-10-13T13:22:54+00:00"
         },
         {
             "name": "theseer/tokenizer",
