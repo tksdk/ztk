@@ -8,6 +8,7 @@ use Tenet\Kernel\Application as KernelApplication;
 use Tenet\Support\Config;
 use Tenet\Ztk\Base\Client;
 use Tenet\Ztk\Taobao\AllGoods;
+use Tenet\Ztk\Taobao\BatchGoods;
 use Tenet\Ztk\Taobao\Brands;
 use Tenet\Ztk\Taobao\Carousel;
 use Tenet\Ztk\Taobao\Category;
@@ -20,7 +21,6 @@ use Tenet\Ztk\Taobao\MeiMeiQuan;
 use Tenet\Ztk\Taobao\QuanGoodsDetails;
 use Tenet\Ztk\Taobao\QuanGoodsSearch;
 use Tenet\Ztk\Taobao\QuanTian;
-use Tenet\Ztk\Taobao\QuanZi;
 use Tenet\Ztk\Taobao\Recommends;
 use Tenet\Ztk\Taobao\ShiShi;
 use Tenet\Ztk\Taobao\ShouDan;
@@ -54,6 +54,7 @@ class Application implements \ArrayAccess, KernelApplication
         "carousel" => Carousel::class,
         "category" => Category::class,
         "couponsGoods" => CouponsGoods::class,
+        "batchGoods" => BatchGoods::class,
         "expiredGoods" => ExpiredGoods::class,
         "gifts" => Gifts::class,
         "quanTian" => QuanTian::class,
