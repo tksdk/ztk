@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types=1);
+declare(strict_types=1);
 
 namespace Tenet\Support;
 
@@ -69,7 +69,7 @@ class Config implements ArrayAccess
         }
     }
 
-   
+
     public function offsetUnset($offset)
     {
         if (isset($this->config[$offset])) {
