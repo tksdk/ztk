@@ -17,18 +17,6 @@ class Client
 
     /**
      * http client 客户端
-     * @var \GuzzleHttp\ClientInterface $httpClient
-use Tenet\Kernel\Application;
-
-class Client
-{
-
-    protected const STATUS_SUCCESS = 'success';
-
-    protected const STATUS_FAILURE = 'failure';
-
-    /**
-     * http client 客户端
      * 
      * @var \GuzzleHttp\ClientInterface $httpClient
      */
